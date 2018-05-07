@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Paring停车</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">设置</string>
+    <string name="mobile_number">手机号</string>
+    <string name="password">密码</string>
+    <string name="log_in">登陆</string>
+    <string name="no_account">还没有账号？注册</string>
+    <string name="name">名字</string>
+    <string name="car_no">车牌号</string>
+    <string name="re_enter">确认密码</string>
+    <string name="create_account">创建账号</string>
+    <string name="already_account">已有账号？登陆</string>
+</resources>
