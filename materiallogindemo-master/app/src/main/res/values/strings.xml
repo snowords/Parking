@@ -13,4 +13,17 @@
     <string name="re_enter">确认密码</string>
     <string name="create_account">创建账号</string>
     <string name="already_account">已有账号？登陆</string>
+
+    <string name="login_failed">登陆失败</string>
+    <string name="mobile_failed">输入一个有效的手机号码</string>
+    <string name="password_failed">输入4至10个字母数字字符</string>
+
+    <string name="signup_failed">登陆失败</string>
+    <string name="name_failed">输入姓名</string>
+    <string name="carno_failed">输入车牌号</string>
+    <string name="re_enter_failed">密码不匹配</string>
+
+    <string name="testSQL">测试SQL</string>
+    <string name="clean">清除数据</string>
+
 </resources>

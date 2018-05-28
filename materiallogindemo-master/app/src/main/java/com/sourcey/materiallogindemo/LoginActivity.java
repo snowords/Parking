@@ -1,10 +1,10 @@
 package com.sourcey.materiallogindemo;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
@@ -23,7 +23,8 @@ public class LoginActivity extends AppCompatActivity {
     @BindView(R.id.input_password) EditText _passwordText;
     @BindView(R.id.btn_login) Button _loginButton;
     @BindView(R.id.link_signup) TextView _signupLink;
-    
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,13 +65,16 @@ public class LoginActivity extends AppCompatActivity {
         final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this,
                 R.style.AppTheme_Dark_Dialog);
         progressDialog.setIndeterminate(true);
-        progressDialog.setMessage("Authenticating...");
+        progressDialog.setMessage("验证中...");
         progressDialog.show();
 
         String mobile = _mobileText.getText().toString();
         String password = _passwordText.getText().toString();
 
+        System.out.println(mobile);
+        System.out.println(password);
         // TODO: Implement your own authentication logic here.
+
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -108,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     public void onLoginFailed() {
-        Toast.makeText(getBaseContext(), "Login failed", Toast.LENGTH_LONG).show();
+        Toast.makeText(getBaseContext(), "登陆失败", Toast.LENGTH_LONG).show();
 
         _loginButton.setEnabled(true);
     }
@@ -119,15 +123,15 @@ public class LoginActivity extends AppCompatActivity {
         String mobile = _mobileText.getText().toString();
         String password = _passwordText.getText().toString();
 
-        if (mobile.isEmpty() || !android.util.Patterns.EMAIL_ADDRESS.matcher(mobile).matches()) {
-            _mobileText.setError("enter a valid mobile number");
+        if (mobile.isEmpty() || !android.util.Patterns.PHONE.matcher(mobile).matches()) {
+            _mobileText.setError("输入一个有效的手机号码");
             valid = false;
         } else {
             _mobileText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 4 || password.length() > 10) {
-            _passwordText.setError("between 4 and 10 alphanumeric characters");
+        if (password.isEmpty() || password.length() < 6 || password.length() > 10) {
+            _passwordText.setError("输入6至10个字母数字字符");
             valid = false;
         } else {
             _passwordText.setError(null);
