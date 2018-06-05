@@ -12,7 +12,9 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/logo"
+        <ImageView
+            android:id="@+id/logo"
+            android:src="@drawable/logo"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="24dp"
@@ -24,11 +26,13 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp">
-            <EditText android:id="@+id/input_mobile"
+
+            <EditText
+                android:id="@+id/input_mobile"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPhonetic"
-                android:hint="@string/mobile_number" />
+                android:hint="@string/mobile_number"
+                android:inputType="textPhonetic" />
         </android.support.design.widget.TextInputLayout>
 
         <!--  Password Label -->
@@ -56,7 +60,7 @@
         <TextView android:id="@+id/link_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="24sp"
             android:text="@string/no_account"
             android:gravity="center"
             android:textSize="16dip"/>

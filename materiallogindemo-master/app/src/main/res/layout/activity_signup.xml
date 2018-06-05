@@ -13,7 +13,9 @@
         android:paddingLeft="24dp"
         android:paddingRight="24dp">
 
-        <ImageView android:src="@drawable/logo"
+        <ImageView
+            android:id="@+id/logo"
+            android:src="@drawable/logo"
             android:layout_width="wrap_content"
             android:layout_height="72dp"
             android:layout_marginBottom="24dp"
@@ -100,7 +102,7 @@
         <TextView android:id="@+id/link_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginBottom="24sp"
             android:text="@string/already_account"
             android:gravity="center"
             android:textSize="16dip"/>

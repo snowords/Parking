@@ -12,10 +12,16 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoginActivity extends AppCompatActivity {
+public class    LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private static final int REQUEST_SIGNUP = 0;
 
@@ -73,6 +79,10 @@ public class LoginActivity extends AppCompatActivity {
 
         System.out.println(mobile);
         System.out.println(password);
+
+
+        final boolean zhengque = QuerySQL(mobile,password);
+
         // TODO: Implement your own authentication logic here.
 
 
@@ -80,8 +90,15 @@ public class LoginActivity extends AppCompatActivity {
                 new Runnable() {
                     public void run() {
                         // On complete call either onLoginSuccess or onLoginFailed
-                        onLoginSuccess();
-                        // onLoginFailed();
+
+                        if (zhengque){
+
+                            onLoginSuccess();
+                        }
+                        else {
+                            onLoginFailed();
+                        }
+
                         progressDialog.dismiss();
                     }
                 }, 3000);
@@ -130,13 +147,60 @@ public class LoginActivity extends AppCompatActivity {
             _mobileText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 6 || password.length() > 10) {
-            _passwordText.setError("输入6至10个字母数字字符");
+        if (password.isEmpty() || password.length() < 6 || password.length() > 13) {
+            _passwordText.setError("输入6至13个字母数字字符");
             valid = false;
         } else {
             _passwordText.setError(null);
         }
 
+
         return valid;
+    }
+
+    private static Connection getSQLConnection(String ip, String user, String pwd, String db)
+    {
+        Connection con = null;
+        try
+        {
+            Class.forName("net.sourceforge.jtds.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:jtds:sqlserver://" + ip + ":1433/" + db + ";charset=utf8", user, pwd);
+        } catch (ClassNotFoundException e)
+        {
+            e.printStackTrace();
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+        }
+        return con;
+    }
+
+    public static Boolean QuerySQL(String mobile,String password)
+    {
+
+        boolean zhengque = true;
+        try
+        {
+            Connection conn = getSQLConnection("10.5.91.37", "sa", "123", "parkdatabase");
+
+            String sql = "select count ( * )from table_signup while mobile='"+mobile+"' and password1='"+password+"'";
+            Statement stmt = conn.createStatement();
+            int sr = stmt.executeUpdate(sql);
+
+            if (sr==0){
+
+                zhengque = false;
+
+            }
+
+            stmt.close();
+            conn.close();
+        } catch (SQLException e)
+        {
+            e.printStackTrace();
+
+        }
+        return  zhengque;
+
     }
 }

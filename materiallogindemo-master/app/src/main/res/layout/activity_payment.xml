@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sourcey.materiallogindemo.PaymentActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/payment_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="256dp"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="订单确认"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="216dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="69dp"
+        android:background="@color/primary"
+        android:text="确认支付"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="455dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="528dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:paddingLeft="14dp"
+        android:paddingRight="14dp"
+        android:paddingTop="32dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="55dp">
+
+        <Button
+            android:id="@+id/button16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     停车场：青岛理工大学停车场"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="26dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     车牌号：鲁B-16043"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="195dp" />
+
+        <Button
+            android:id="@+id/button20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     预约时间：2018年9月1日 8:05"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="254dp" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     结束时间：2018年9月1日 11:05"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="32dp"
+            tools:layout_editor_absoluteY="254dp" />
+
+        <Button
+            android:id="@+id/button17"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     停车资费：15 RMB/H"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/button18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:background="@color/primary"
+            android:gravity="center_vertical"
+            android:text="     本次停车费用：45 元"
+            android:textColor="@color/white"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="135dp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/payment_back"
+        android:layout_width="38dp"
+        android:layout_height="54dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</RelativeLayout>

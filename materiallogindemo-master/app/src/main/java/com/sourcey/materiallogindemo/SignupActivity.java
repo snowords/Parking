@@ -57,7 +57,7 @@ public class SignupActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(),LoginActivity.class);
                 startActivity(intent);
                 finish();
-                overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
+                overridePendingTransition(R.anim.push_left_out,R.anim.push_left_in );
             }
         });
     }
@@ -139,7 +139,7 @@ public class SignupActivity extends AppCompatActivity {
                     //tvTestResult.setText(str);
                     break;
 
-                default:
+                default: ;
                     break;
             }
         }
@@ -147,6 +147,10 @@ public class SignupActivity extends AppCompatActivity {
 
 
     //测试代码
+    public void onBackPressed() {
+        // Disable going back to the MainActivity
+        moveTaskToBack(true);
+    }
 
     public void onSignupFailed() {
         Toast.makeText(getBaseContext(), "注册失败", Toast.LENGTH_LONG).show();
@@ -185,8 +189,8 @@ public class SignupActivity extends AppCompatActivity {
             _mobileText.setError(null);
         }
 
-        if (password.isEmpty() || password.length() < 8 || password.length() > 10) {
-            _passwordText.setError("输入8至10个字母数字字符");
+        if (password.isEmpty() || password.length() < 6 || password.length() > 13) {
+            _passwordText.setError("输入6至13个字母数字字符");
             valid = false;
         } else {
             _passwordText.setError(null);

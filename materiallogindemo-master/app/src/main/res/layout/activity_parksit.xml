@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sourcey.materiallogindemo.ParksitActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/parksit_activity_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/primary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="256dp"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="停车位选择"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="133dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="注：请在预约停车完成后30分钟内进入停车场进行停车，否则订单自动取消！"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/aluminum"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="64dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="331dp"
+        android:layout_below="@id/parksit_activity_toolbar"
+        android:paddingLeft="48dp"
+        android:paddingRight="48dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="105dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="C区"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="B区"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="68dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="A区"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp">
+
+            <ImageButton
+                android:id="@+id/imageButtonA1"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonA2"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonA3"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="118dp"
+                tools:layout_editor_absoluteY="244dp" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="1号"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="3dp">
+
+            <ImageButton
+                android:id="@+id/imageButtonB1"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonB2"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="118dp"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonB3"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="244dp" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="2号"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:paddingBottom="3dp">
+            <ImageButton
+                android:id="@+id/imageButtonC1"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="190dp"
+                tools:layout_editor_absoluteY="142dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonC2"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="244dp" />
+
+            <ImageButton
+                android:id="@+id/imageButtonC3"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:layout_marginRight="3dp"
+                android:background="@color/jumbo"
+                app:srcCompat="@drawable/ic_directions_car_black_24dp"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="142dp" />
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="68dp"
+                android:layout_height="68dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="3号"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:textColor="@color/primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/park_Apply"
+        android:layout_width="180dp"
+        android:layout_height="52dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:background="@color/primary"
+        android:text="确定停车"
+        android:textColor="@color/white"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <ImageView
+        android:id="@+id/parksit_back"
+        android:layout_width="34dp"
+        android:layout_height="51dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="3dp"
+        app:srcCompat="@drawable/ic_keyboard_arrow_left_white_24dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+</RelativeLayout>
